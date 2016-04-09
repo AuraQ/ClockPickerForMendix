@@ -1,4 +1,4 @@
-# AutoComplete for Mendix
+# ClockPicker for Mendix
 
 This widget is a wrapper for the [Clockpicker plugin](http://weareoutman.github.io/clockpicker/)  allowing a user to select a time using a clock face.
 
