@@ -25,7 +25,10 @@ Where a user needs to input a time.
 - **'Done' text**: The caption for the button displayed if Auto Close is false.
 
 ## Events
-- **On change**: The microflow that will be run when an item is selected or the control is cleared.
+- **On change**: The microflow that will be run when the time is changed.
+
+# Current Limitations
+If you have separate date and time fields on a page that are bound to the same datetime attribute (with an empty value) and the user sets the time first, the date field will not update to reflect the selected value unless an on change microflow is executed that refreshes the page.
 
 # Known Issues
 
