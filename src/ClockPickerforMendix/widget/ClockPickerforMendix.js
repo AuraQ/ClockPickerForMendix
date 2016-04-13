@@ -4,7 +4,7 @@
     ========================
 
     @file      : ClockPickerforMendix.js
-    @version   : 1.0.0
+    @version   : 1.0.1
     @author    : Iain Lindsay
     @date      : 4/5/2016
     @copyright : AuraQ Limited 2016
@@ -19,15 +19,15 @@
 require({
     packages: [{
          name: 'jqwrapper',
-         location: '../../widgets/ClockPickerForMendix/lib',
+         location: '../../widgets/ClockPickerforMendix/lib',
          main: 'jqwrapper'
     }, {
          name: 'bootstrap',
-         location: '../../widgets/ClockPickerForMendix/lib',
+         location: '../../widgets/ClockPickerforMendix/lib',
          main: 'bootstrap'
     }, {
          name: 'bootstrap-clockpicker',
-         location: '../../widgets/ClockPickerForMendix/lib',
+         location: '../../widgets/ClockPickerforMendix/lib',
          main: 'bootstrap-clockpicker'
     }]
     }, [
