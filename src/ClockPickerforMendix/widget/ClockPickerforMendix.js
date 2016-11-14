@@ -4,9 +4,9 @@
     ========================
 
     @file      : ClockPickerforMendix.js
-    @version   : 1.0.1
+    @version   : 1.0.2
     @author    : Iain Lindsay
-    @date      : 4/5/2016
+    @date      : 14/11/2016
     @copyright : AuraQ Limited 2016
     @license   : Apache V2
 
@@ -342,9 +342,13 @@ require({
             }
             
             try{ 
-                if( amOrPm && amOrPm.toLowerCase() === 'pm'){
+                if( amOrPm && amOrPm.toLowerCase() === 'pm' && hours < 12){
                     hours = hours + 12;
-                }                  
+                }
+
+                if( amOrPm && amOrPm.toLowerCase() === 'am' && hours == 12){
+                    hours = hours - 12;
+                }              
                 
                 d.setHours(parseInt(hours));
                 d.setMinutes(parseInt(mins));
