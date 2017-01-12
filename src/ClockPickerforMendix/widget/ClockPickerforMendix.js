@@ -4,10 +4,10 @@
     ========================
 
     @file      : ClockPickerforMendix.js
-    @version   : 1.0.2
+    @version   : 1.0.3
     @author    : Iain Lindsay
-    @date      : 14/11/2016
-    @copyright : AuraQ Limited 2016
+    @date      : 2017-01-12
+    @copyright : AuraQ Limited 2017
     @license   : Apache V2
 
     Documentation
@@ -16,21 +16,7 @@
 */
 
 // Required module list. Remove unnecessary modules, you can always get them back from the boilerplate.
-require({
-    packages: [{
-         name: 'jqwrapper',
-         location: '../../widgets/ClockPickerforMendix/lib',
-         main: 'jqwrapper'
-    }, {
-         name: 'bootstrap',
-         location: '../../widgets/ClockPickerforMendix/lib',
-         main: 'bootstrap'
-    }, {
-         name: 'bootstrap-clockpicker',
-         location: '../../widgets/ClockPickerforMendix/lib',
-         main: 'bootstrap-clockpicker'
-    }]
-    }, [
+define( [
     "dojo/_base/declare",
     "mxui/widget/_WidgetBase",
     "dijit/_TemplatedMixin",
@@ -46,15 +32,15 @@ require({
     "dojo/text",
     "dojo/html",
     "dojo/_base/event",
-    "jqwrapper",
-    "bootstrap",
-    "bootstrap-clockpicker",
+    "ClockPickerforMendix/lib/jquery-1.11.2",
+    "ClockPickerforMendix/lib/bootstrap",
+    "ClockPickerforMendix/lib/bootstrap-clockpicker",
     "dojo/text!ClockPickerforMendix/widget/template/ClockPickerforMendix.html"
 ], function(declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, dojoLang, dojoText, dojoHtml, dojoEvent, 
-    _jqwrapper, _bootstrap, _bootstrapClockpicker, widgetTemplate) {
+    _jQuery, _bootstrap, _bootstrapClockpicker, widgetTemplate) {
     "use strict";
 
-    var $ = _jqwrapper;
+    var $ = _jQuery.noConflict(true);
     $ = _bootstrap.createInstance($);
     $ = _bootstrapClockpicker.createInstance($);
 
