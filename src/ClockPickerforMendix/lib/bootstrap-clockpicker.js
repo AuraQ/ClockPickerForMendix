@@ -399,32 +399,32 @@ define([], function () {
                     // Place the popover
                     switch (placement) {
                         case 'bottom':
-                            styles.top = offset.top + height;
+                            styles.top = height;
                             break;
                         case 'right':
-                            styles.left = offset.left + width;
+                            styles.left =  width;
                             break;
                         case 'top':
-                            styles.top = offset.top - popover.outerHeight();
+                            styles.top = -popover.outerHeight();
                             break;
                         case 'left':
-                            styles.left = offset.left - popover.outerWidth();
+                            styles.left = -popover.outerWidth();
                             break;
                     }
 
                     // Align the popover arrow
                     switch (align) {
                         case 'left':
-                            styles.left = offset.left;
+                            styles.left = 0;
                             break;
                         case 'right':
-                            styles.left = offset.left + width - popover.outerWidth();
+                            styles.left = width - popover.outerWidth();
                             break;
                         case 'top':
-                            styles.top = offset.top;
+                            styles.top = 0;
                             break;
                         case 'bottom':
-                            styles.top = offset.top + height - popover.outerHeight();
+                            styles.top = height - popover.outerHeight();
                             break;
                     }
 
@@ -445,7 +445,7 @@ define([], function () {
                     // Initialize
                     if (! this.isAppended) {
                         // Append popover to body
-                        $body = $(document.body).append(this.popover);
+                        $body = $(this.element).append(this.popover);
 
                         // Reset position when resize
                         $win.on('resize.clockpicker' + this.id, function(){

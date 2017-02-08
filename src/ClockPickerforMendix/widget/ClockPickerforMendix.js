@@ -4,9 +4,9 @@
     ========================
 
     @file      : ClockPickerforMendix.js
-    @version   : 1.0.3
+    @version   : 1.0.4
     @author    : Iain Lindsay
-    @date      : 2017-01-12
+    @date      : 2017-02-08
     @copyright : AuraQ Limited 2017
     @license   : Apache V2
 
